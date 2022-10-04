@@ -59,7 +59,7 @@ app.post("/add-gps", async (req, res) => {
         latitude: data.latitude,
         longitude: data.longitude
     });
-    res.status(200).json(users)
+    res.send(users)
 });
 
 
