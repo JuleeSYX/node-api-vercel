@@ -82,7 +82,7 @@ app.post("/add-timeline", async (req, res) => {
     res.status(200).json(timeline)
 });
 
-app.post("/add-gggggg", async (req, res) => {
+app.get("/add-gggggg", async (req, res) => {
 
     const data = req.body
 
