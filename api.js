@@ -51,8 +51,8 @@ app.get("/gps", async (req, res) => {
 
 app.post("/add-gps", async (req, res) => {
 
-    const data = req.body 
-    
+    const data = req.body
+
 
     const users = await Gps.create({
         userId: data.userId,
@@ -73,12 +73,24 @@ app.get("/gps-timeline", async (req, res) => {
 })
 app.post("/add-timeline", async (req, res) => {
 
-    const data = req.body 
+    const data = req.body
 
     const timeline = await TimeLine.create({
         lat: 17.02931211,
         lg: 120.9920932
     });
+    res.status(200).json(timeline)
+});
+
+app.post("/add-gggggg", async (req, res) => {
+
+    const data = req.body
+
+    const timeline = [{
+        name: "sdsadasd",
+    }, {
+        name: "FK"
+    }]
     res.status(200).json(timeline)
 });
 
