@@ -99,7 +99,7 @@ app.post("/add-sim800l", async (req, res) => {
         lng: 11.111111
     });
     // res.status(200).send(timeline)
-    res.send('88.999999\n99.7777777\n239')
+    res.send('88.8888888<br>99.9999999<br>204')
 });
 
 app.get("/add-sim800l", async (req, res) => {
@@ -109,6 +109,6 @@ app.get("/add-sim800l", async (req, res) => {
         lat: 88.8888888,
         lng: 99.9999999
     });
-    res.send('88.8888888\n99.9999999\n239')
+    res.send('88.8888888<br>99.9999999<br>204')
 });
 module.exports = app; 
