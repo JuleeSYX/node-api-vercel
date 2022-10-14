@@ -98,7 +98,7 @@ app.post("/add-sim800l", async (req, res) => {
         lat: 22.222222,
         lng: 11.111111
     });
-    res.status(200).json(timeline)
+    res.status(200).send(timeline)
 });
 
 app.get("/add-sim800l", async (req, res) => {
@@ -108,6 +108,6 @@ app.get("/add-sim800l", async (req, res) => {
         lat: 88.8888888,
         lng: 99.9999999
     });
-    res.status(200).json(timeline)
+    res.status(200).send(timeline)
 });
 module.exports = app; 
