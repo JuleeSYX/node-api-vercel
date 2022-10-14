@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const User = require("./models/user");
 const Gps = require("./models/gps");
 const TimeLine = require("./models/timeline");
+const Sim800l = require("./models/sim800l");
 
 app.use(express.json())
 
@@ -38,7 +39,6 @@ app.delete("/delete-user", async (req, res) => {
 });
 
 
-
 app.get("/gps", async (req, res) => {
     const users = await Gps.find({}).limit(200).sort({ length: -1 });
     try {
@@ -50,10 +50,7 @@ app.get("/gps", async (req, res) => {
 
 
 app.post("/add-gps", async (req, res) => {
-
     const data = req.body
-
-
     const users = await Gps.create({
         userId: data.userId,
         latitude: data.latitude,
@@ -94,4 +91,13 @@ app.get("/add-gggggg", async (req, res) => {
     res.status(200).json(timeline)
 });
 
+app.post("/add-sim800l", async (req, res) => {
+    const data = req.body
+    console.log(data);
+    const timeline = await Sim800l.create({
+        lat: 17.02931211,
+        lng: 120.9920932
+    });
+    res.status(200).json(timeline)
+});
 module.exports = app; 
