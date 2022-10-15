@@ -95,20 +95,10 @@ app.post("/add-sim800l", async (req, res) => {
     const data = req.body
     console.log(data);
     const timeline = await Sim800l.create({
-        lat: 22.222222,
-        lng: 11.111111
+        lat: 22.333333,
+        lng: 11.333333
     });
     // res.status(200).send(timeline)
-    res.send('88.8888888<br>99.9999999<br>204')
-});
-
-app.get("/add-sim800l", async (req, res) => {
-    const data = req.body
-    console.log(data);
-    const timeline = await Sim800l.create({
-        lat: 88.8888888,
-        lng: 99.9999999
-    });
-    res.send('88.8888888<br>99.9999999<br>204')
+    res.send('88.3333333<br>99.222222<br>204')
 });
 module.exports = app; 
