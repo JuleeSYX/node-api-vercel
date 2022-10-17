@@ -112,7 +112,6 @@ app.put("/add-sim800l", async (req, res) => {
     // res.status(200).send(timeline)
     res.send('88.44444<br>99.444444<br>204')
 });
-
 app.get("/add-sim800l", async (req, res) => {
     const data = req.body
     console.log(data);

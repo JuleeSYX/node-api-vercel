@@ -24,6 +24,6 @@ app.get("/", async (req, res)=>{
 
 app.use(api)
 
-app.listen(80, () => {
-  console.log("Server is running at port 8000");
-});
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
