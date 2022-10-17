@@ -24,6 +24,6 @@ app.get("/", async (req, res)=>{
 
 app.use(api)
 
-app.listen(8000, () => {
+app.listen(80, () => {
   console.log("Server is running at port 8000");
 });
